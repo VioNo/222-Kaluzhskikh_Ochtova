@@ -24,25 +24,21 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="2">
             <Label Content="X ="  Width="40" Height="30" />
-            <TextBox x:Name="X" Width="150" Height="30"/>
+            <TextBox x:Name="X" Width="150" Height="30" ToolTip="Введите значение x"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="3">
             <Label Content="P ="  Width="40" Height="30" />
-            <TextBox x:Name="P" Width="150" Height="30"/>
+            <TextBox x:Name="P" Width="150" Height="30" ToolTip="Введите значение p"/>
         </StackPanel>
         <Label Content="Result"  Width="60" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4"/>
         <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Width="100" Height="100" HorizontalAlignment="Left">
-            <RadioButton x:Name="sh" Content="sh(x)"/>
-            <RadioButton x:Name="x2" Content="x^2"/>
-            <RadioButton x:Name="ex" Content="e^x"/>
+            <RadioButton x:Name="sh" Content="sh(x)" ToolTip="Гиперболический синус x"/>
+            <RadioButton x:Name="x2" Content="x^2" ToolTip="x в квадрате" />
+            <RadioButton x:Name="ex" Content="e^x" ToolTip="Экспонента x"/>
         </StackPanel>
-        <Button x:Name="Calculate" Content="Calculate"  Grid.Row="2" Grid.Column="2" Click="Calculate_Click"/>
-        <Button x:Name="Clear" Content="Clear" Grid.Row="3" Grid.Column="2" Click="Clear_Click"/>
-        <TextBox x:Name="Result" Text="Result" Width="250" Height="30" Grid.Column="2"  Grid.Row="4"/>
-
-
-
-
+        <Button x:Name="Calculate" Content="Calculate"  Grid.Row="2" Grid.Column="2" Click="Calculate_Click" ToolTip="Вычислить значение функции"/>
+        <Button x:Name="Clear" Content="Clear" Grid.Row="3" Grid.Column="2" Click="Clear_Click" ToolTip="Очистить все" />
+        <TextBox x:Name="Result" Text="Result" Width="250" Height="30" Grid.Column="2"  Grid.Row="4" ToolTip="Результат вычисления"/>
 
     </Grid>
 </Window>

@@ -84,5 +84,13 @@ namespace _222_Kaluzhskikh_Ochtova
             Result.Clear();
 
         }
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+            var result = MessageBox.Show("Вы действительно хотите выйти?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
